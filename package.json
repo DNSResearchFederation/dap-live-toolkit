@@ -1,0 +1,22 @@
+{
+  "name": "dap-live-toolkit",
+  "version": "0.0.1",
+  "description": "DAP.Live Toolkit",
+  "dependencies": {
+    "chart.js": "^3.9.1"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.3",
+    "ts-node": "^8.3.0",
+    "typescript": "^4.5.4",
+    "uglify-template-string-loader": "^1.1.1",
+    "version-bump-prompt": "^6.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-shell-plugin-next": "^2.2.2"
+  },
+  "scripts": {
+    "build:ts": "webpack --config webpack.config.js -p --display-modules",
+    "watch:ts": "webpack --config webpack.config.js --watch"
+  }
+}

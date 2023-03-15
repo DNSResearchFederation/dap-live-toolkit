@@ -1,0 +1,11 @@
+.flex{
+    display: flex;
+}
+.grid{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex.grid > *{
+    width: 33%;
+}
