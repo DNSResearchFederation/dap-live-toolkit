@@ -1,5 +1,6 @@
 const path = require('path');
 const ROOT = path.resolve(__dirname, 'ts');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const DESTINATION = path.resolve(__dirname, 'dist');
 
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
     entry: {
         'DAPLiveToolkit': 'toolkit.ts'
     },
+    plugins: [new MiniCssExtractPlugin()],
 
     module: {
         rules: [
@@ -22,12 +24,17 @@ module.exports = {
 
                 },
                     'uglify-template-string-loader']
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                exclude: ["/node_modules/"],
+                use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
             }
         ]
     },
 
     output: {
-        library: 'DAPLiveToolkit',
+        library: '[name]',
         libraryTarget: 'umd',
         libraryExport: 'default',
         filename: 'dap-live-toolkit.js',

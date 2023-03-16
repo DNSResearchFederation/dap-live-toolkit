@@ -5,8 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../dist/dap-live-toolkit.css">
     <link rel="stylesheet" type="text/css" href="example.css">
-    <title>Programatic Toolkit Example</title>
+    <title>Inline Toolkit Example</title>
 </head>
 <body>
 <div class="flex">
@@ -15,10 +16,16 @@
     </dap-stats>
 </div>
 <div class="flex grid">
-    <dap-line-chart>
-        <h1>Loading...</h1>
-    </dap-line-chart>
     <dap-table>
+        <h1>Loading...</h1>
+    </dap-table>
+    <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023">
+        <template data-property="description">
+            <h5>Description</h5>
+            <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank supplied by Google CrUX for that domain</p>
+            <h5>Feed sources:</h5>
+            <p>Tranco, Google CrUX</p>
+        </template>
         <h1>Loading...</h1>
     </dap-table>
     <dap-bar-chart>
@@ -36,6 +43,6 @@
         <h1>Loading...</h1>
     </dap-table>
 </div>
-
+<script type="text/javascript" src="../dist/dap-live-toolkit.js"></script>
 </body>
 </html>
