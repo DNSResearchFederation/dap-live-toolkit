@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="example.css">
     <title>Inline Toolkit Example</title>
 </head>
-<body>
+<body data-dap-api-key="EyMcpguhOMeIvAEL" data-dap-api-secret="30Bgy4WDy6tBkNXZ">
 <div class="flex">
     <dap-stats data-feed1-path="">
         <h1>Loading...</h1>
@@ -19,7 +19,8 @@
     <dap-table>
         <h1>Loading...</h1>
     </dap-table>
-    <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023">
+    <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023" data-table-connection-path="latest-highest-rank" data-table-limit="100"
+    data-table-headers="Domain Name,Tranco Rank,CrUX Rank" data-table-data-keys="domain,rank,cruxRankDisplay">
         <template data-property="description">
             <h5>Description</h5>
             <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank supplied by Google CrUX for that domain</p>

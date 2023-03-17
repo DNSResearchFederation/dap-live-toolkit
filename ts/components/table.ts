@@ -8,7 +8,11 @@ export default class Table extends BaseComponent {
      * @param element
      * @param properties
      */
-    init(element: HTMLElement, properties: any) {
+    protected async init(element: HTMLElement, properties: any) {
+        if (properties.tableConnectionPath) {
+            let data = await this.callApiConnection(properties.tableConnectionPath, {limit: properties.tableLimit || 50});
+            console.log(data);
+        }
 
         let html = `
             <div>`;
@@ -20,7 +24,7 @@ export default class Table extends BaseComponent {
 
             if (properties.categories) {
                 let splitCategories = properties.categories.split(",");
-                splitCategories.forEach(category => html += `<div><div>${category}</div></div>`)
+                splitCategories.forEach(category => html += `<div><div>${category}</div></div>`);
             }
 
             if (properties.time) {
@@ -28,14 +32,24 @@ export default class Table extends BaseComponent {
             }
             html += '</div>';
         }
+        if (properties.description) {
+            html += `<div class="description">
+               ${properties.description}
+               </div>
+            `;
+        }
+        html += `
+          <div class="table">
+                    <table>
+                        <tr>`
+
+        if (properties.tableHeaders) {
+            let splitHeaders = properties.tableHeaders.split(",");
+            splitHeaders.forEach(tableHeader => html += `<th>${tableHeader}</th>`)
+
+        }
 
         html += `
-                <div class="table">
-                    <table>
-                        <tr>
-                            <th>Domain Name</th>
-                            <th>Tranco Rank</th>
-                            <th>CrUX Rank</th>
                         </tr>
                         <tr>
                             <td>google.com</td>
