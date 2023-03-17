@@ -9,8 +9,9 @@ export default class Table extends BaseComponent {
      * @param properties
      */
     protected async init(element: HTMLElement, properties: any) {
+        let data =[];
         if (properties.tableConnectionPath) {
-            let data = await this.callApiConnection(properties.tableConnectionPath, {limit: properties.tableLimit || 50});
+            data = await this.callApiConnection(properties.tableConnectionPath, {limit: properties.tableLimit || 50});
             console.log(data);
         }
 
@@ -49,21 +50,28 @@ export default class Table extends BaseComponent {
 
         }
 
-        html += `
-                        </tr>
-                        <tr>
-                            <td>google.com</td>
-                            <td>1</td>
-                            <td>Top 1k</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        `;
+        html += `</tr>`;
 
+        let splitDataKeys = properties.tableDataKeys.split(",");
+
+        data.forEach(row =>{
+            html += `<tr>`;
+
+            splitDataKeys.forEach(dataKey =>{
+               html+= `
+               <td>${row[dataKey]}</td>`
+            });
+
+            html += `</tr>`
+        });
+        //                     <td>google.com</td>
+        //                     <td>1</td>
+        //                     <td>Top 1k</td>
+        //                 </tr>
+        //             </table>
+        //         </div>
+        //     </div>
+        // `;
         element.innerHTML = html;
-
     }
-
-
 }

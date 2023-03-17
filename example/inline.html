@@ -19,11 +19,14 @@
     <dap-table>
         <h1>Loading...</h1>
     </dap-table>
-    <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023" data-table-connection-path="latest-highest-rank" data-table-limit="100"
-    data-table-headers="Domain Name,Tranco Rank,CrUX Rank" data-table-data-keys="domain,rank,cruxRankDisplay">
+    <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023"
+               data-table-connection-path="latest-highest-rank" data-table-limit="100"
+               data-table-headers="Domain Name,Tranco Rank,CrUX Rank"
+               data-table-data-keys="domain,rank,cruxRankDisplay">
         <template data-property="description">
             <h5>Description</h5>
-            <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank supplied by Google CrUX for that domain</p>
+            <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank supplied
+                by Google CrUX for that domain</p>
             <h5>Feed sources:</h5>
             <p>Tranco, Google CrUX</p>
         </template>
@@ -34,13 +37,13 @@
     </dap-bar-chart>
 </div>
 <div class="flex grid">
-    <dap-table>
+    <dap-table data-title="Top 50 TLD" data-categories="Market" data-time="15 Mar 2023"  data-table-limit="100" data-table-headers="TLD, Totals, 7 day change" data-table-data-keys="tld,latestTotal,percentageChange" data-table-connection-path="top-50-tlds">
         <h1>Loading...</h1>
     </dap-table>
     <dap-line-chart>
         <h1>Loading...</h1>
     </dap-line-chart>
-    <dap-table>
+    <dap-table data-title="Top 50 Phishing Root Domains" data-categories="Abuse" data-time="15 Mar 2023"  data-table-limit="100" data-table-headers="" data-table-data-keys="domain_name,totalsLastHrs,totalsSevenDaysAgo" data-table-connection-path="top-phishing-domains">
         <h1>Loading...</h1>
     </dap-table>
 </div>
