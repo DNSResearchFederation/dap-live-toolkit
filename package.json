@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "DAP.Live Toolkit",
   "dependencies": {
-    "chart.js": "^3.9.1"
+    "chart.js": "^3.9.1",
+    "mustache": "^4.2.0"
   },
   "devDependencies": {
     "ts-loader": "^8.0.3",
