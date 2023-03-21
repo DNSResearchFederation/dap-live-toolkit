@@ -1,40 +1,99 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: auto;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem; }
+  @media (min-width: 48em) {
+    .wrapper .wrapper {
+      display: flex; } }
+  @media (min-width: 80em) {
+    .wrapper .wrapper {
+      max-width: 1280px; } }
+
+.test {
+  display: flex;
+  width: 33.33%;
+  padding: 0; }
+
+@media (max-width: 48em) {
+  .test {
+    width: 100%; } }
+
 .dap-component {
   flex-direction: column;
   display: flex;
   -webkit-box-flex: 1;
   font-family: Roboto, sans-serif;
-  width: 100%;
-  background-color: purple;
+  background-color: #F6F1F1;
   margin-left: 0.5rem;
-  margin-right: 0.5rem; }
-  .dap-component h4 {
+  margin-right: 0.5rem;
+  width: 100%; }
+  .dap-component .title-div {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.75rem; }
+  .dap-component .title-div > h4 {
     color: #2F4858;
     font-size: 1.4rem;
     padding-right: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: 1rem; }
-  .dap-component div > div {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
-  .dap-component div > div > div {
+  .dap-component .title-div > button {
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    border-radius: 0;
+    font-size: 1rem;
+    line-height: 1;
+    padding-top: 1rem;
+    width: 2rem; }
+  .dap-component .hide {
+    display: none; }
+  .dap-component div {
+    padding: 0.5rem; }
+  .dap-component .categories {
     display: inline-block;
     background-color: #eee;
     padding: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
     text-transform: uppercase; }
   .dap-component time {
     color: #888;
     display: block; }
   .dap-component div.table {
-    background-color: pink;
-    min-height: 15vh;
+    background-color: #F6F1F1;
+    min-height: 25vh;
     position: relative;
     -webkit-box-flex: 1;
-    flex: 1 0 0%; }
+    flex: 1 0 0; }
+  .dap-component div.table > div {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
   .dap-component table {
-    border-collapse: collapse; }
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%; }
     .dap-component table tr {
       border-collapse: collapse; }
+      .dap-component table tr td {
+        padding: 0.35rem;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: lightgray; }
+      .dap-component table tr td:nth-child(2) {
+        text-align: right; }
       .dap-component table tr th {
         border-bottom: 2px solid red;
         border-collapse: collapse; }

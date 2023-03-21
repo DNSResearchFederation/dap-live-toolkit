@@ -50,7 +50,6 @@ export default abstract class BaseComponent extends HTMLElement {
 
         this._properties = {...properties, ...(<HTMLElement>this).dataset, ...templateProps};
 
-
         this._element.classList.add("dap-component");
 
         // Call init on child component
