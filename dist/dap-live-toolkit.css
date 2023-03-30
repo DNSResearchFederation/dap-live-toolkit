@@ -1,3 +1,9 @@
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0; }
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -14,13 +20,14 @@
     .wrapper .wrapper {
       max-width: 1280px; } }
 
-.test {
+.dap-wrapper {
   display: flex;
   width: 33.33%;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 1rem; }
 
 @media (max-width: 48em) {
-  .test {
+  .dap-wrapper {
     width: 100%; } }
 
 .dap-component {
@@ -42,37 +49,81 @@
   .dap-component .title-div > h4 {
     color: #2F4858;
     font-size: 1.4rem;
-    padding-right: 0.5rem;
+    padding-right: 0.5rem; }
+  .dap-component .hide {
+    display: none; }
+  .dap-component .category-wrapper {
+    padding: 0.5rem; }
+  .dap-component .categories {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #eee;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem; }
+    .dap-component .categories:first-child {
+      margin-left: 0; }
+  .dap-component .date {
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem; }
+  .dap-component .cta-wrapper {
+    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    border-top: solid 1px #eee;
+    font-size: 0.9rem; }
+  .dap-component .message {
+    background-color: rgba(103, 106, 139, 0.2);
+    border-left: 8px solid #676A8B;
+    padding: 1rem 0.5rem 1rem 0.5rem; }
+  .dap-component .message-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+  .dap-component .details {
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 400;
     margin-bottom: 0.5rem;
-    margin-top: 1rem; }
-  .dap-component .title-div > button {
+    font-size: 0.9rem; }
+  .dap-component .mute {
+    color: gray; }
+  .dap-component a {
+    color: #2F4858;
+    font-weight: bold; }
+  .dap-component button {
     border: none;
     background-color: transparent;
     text-align: left;
+    align-items: center;
     border-radius: 0;
     font-size: 1rem;
     line-height: 1;
-    padding-top: 1rem;
     width: 2rem; }
-  .dap-component .hide {
-    display: none; }
-  .dap-component div {
-    padding: 0.5rem; }
-  .dap-component .categories {
-    display: inline-block;
-    background-color: #eee;
-    padding: 0.25rem;
-    margin-left: 0.5rem;
-    text-transform: uppercase; }
+  .dap-component dl {
+    font-size: 0.8rem; }
+  .dap-component dt {
+    color: #676A8B;
+    padding-right: 0.5rem;
+    padding-bottom: 0.25rem;
+    font-weight: bold; }
+  .dap-component dd {
+    display: block;
+    margin-inline-start: 40px;
+    margin: 0;
+    padding-bottom: 0.5rem; }
   .dap-component time {
     color: #888;
     display: block; }
+  .dap-component span {
+    font-size: 0.8rem; }
   .dap-component div.table {
     background-color: #F6F1F1;
     min-height: 25vh;
     position: relative;
     -webkit-box-flex: 1;
-    flex: 1 0 0; }
+    flex: 1 0 0;
+    margin-left: 0.25rem; }
   .dap-component div.table > div {
     overflow: auto;
     position: absolute;
@@ -81,19 +132,35 @@
     bottom: 0;
     left: 0;
     width: 100%; }
+    .dap-component div.table > div::-webkit-scrollbar {
+      position: relative;
+      background-color: #F6F1F1;
+      width: 6px; }
+    .dap-component div.table > div::-webkit-scrollbar-thumb {
+      background-color: #2F4858;
+      border-radius: 5px; }
+    .dap-component div.table > div::-webkit-scrollbar-track {
+      background-color: transparent; }
   .dap-component table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%; }
+    width: 98%; }
     .dap-component table tr {
       border-collapse: collapse; }
+      .dap-component table tr:nth-child(1) {
+        border-bottom: 2px solid #2F4858;
+        color: gray;
+        font-size: 0.8rem;
+        font-weight: lighter; }
       .dap-component table tr td {
-        padding: 0.35rem;
+        padding: 0.25rem 1.5rem 0.25rem 0.25rem;
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-bottom-color: lightgray; }
-      .dap-component table tr td:nth-child(2) {
-        text-align: right; }
+        .dap-component table tr td:nth-child(2) {
+          text-align: right; }
+        .dap-component table tr td:nth-child(3) {
+          text-align: left; }
       .dap-component table tr th {
         border-bottom: 2px solid red;
         border-collapse: collapse; }

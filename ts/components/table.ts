@@ -46,5 +46,16 @@ export default class Table extends BaseComponent {
                 element.querySelector(".message").classList.toggle("hide");
             });
         });
+        //
+        // let currentDate = new Date();
+        // let year = currentDate.getFullYear();
+        // let month = currentDate.getMonth() + 1;
+        // let day = currentDate.getDate();
+        // let hour = currentDate.getHours();
+        // let minute = currentDate.getMinutes();
+        // let second = currentDate.getSeconds();
+        // let currentDateTimeSpan = document.getElementById("table-date");
+        // currentDateTimeSpan.innerHTML = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+
     }
 }

@@ -1,7 +1,16 @@
 $bg-base-color: #F6F1F1
 $primary-text-color: #2F4858
 $secondary-text-color: black
-$muted-text-color: #ECF2FF
+$muted-text-color: gray
+$info-background: rgba(103, 106, 139, 0.2)
+$info-color: #676A8B
+
+//Reset css
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video
+  border: 0
+  margin: 0
+  outline: 0
+  padding: 0
 
 .wrapper
   display: flex
@@ -20,14 +29,14 @@ $muted-text-color: #ECF2FF
     .wrapper
       max-width: 1280px
 
-
-.test
+.dap-wrapper
   display: flex
   width: 33.33%
   padding: 0
+  margin-bottom: 1rem
 
 @media (max-width: 48em)
-  .test
+  .dap-wrapper
     width: 100%
 
 
@@ -54,45 +63,92 @@ $muted-text-color: #ECF2FF
     color: $primary-text-color
     font-size: 1.4rem
     padding-right: 0.5rem
-    margin-bottom: 0.5rem
-    margin-top: 1rem
-
-  .title-div > button
-    border: none
-    background-color: transparent
-    text-align: left
-    border-radius: 0
-    font-size: 1rem
-    line-height: 1
-    padding-top: 1rem
-    width: 2rem
 
   .hide
     display: none
 
-  div
+  .category-wrapper
     padding: 0.5rem
 
-
   .categories
+    padding: 0.25rem
+    font-size: 0.8rem
+    text-transform: uppercase
     display: inline-block
     background-color: #eee
-    padding: 0.25rem
     margin-left: 0.5rem
-    text-transform: uppercase
+    margin-bottom: 0.5rem
+    &:first-child
+     margin-left: 0
 
+  .date
+    font-weight: 300
+    font-size: 0.8rem
+    margin-bottom: 0.5rem
+
+  .cta-wrapper
+    padding: 0.75rem 0.5rem 0.75rem 0.5rem
+    border-top: solid 1px #eee
+    font-size: 0.9rem
+
+  .message
+    background-color: $info-background
+    border-left: 8px solid $info-color
+    padding: 1rem 0.5rem 1rem 0.5rem
+
+  .message-header
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+  .details
+    margin-top: 0.25rem
+    text-transform: uppercase
+    font-weight: 400
+    margin-bottom: 0.5rem
+    font-size: 0.9rem
+  .mute
+    color: $muted-text-color
+  a
+    color: $primary-text-color
+    font-weight: bold
+
+  button
+    border: none
+    background-color: transparent
+    text-align: left
+    align-items: center
+    border-radius: 0
+    font-size: 1rem
+    line-height: 1
+    width: 2rem
+
+  dl
+    font-size: 0.8rem
+
+  dt
+    color: $info-color
+    padding-right: 0.5rem
+    padding-bottom: 0.25rem
+    font-weight: bold
+  dd
+    display: block
+    margin-inline-start: 40px
+    margin: 0
+    padding-bottom: 0.5rem
   time
     color: #888
     display: block
+  span
+    font-size: 0.8rem
 
   div.table
     background-color: $bg-base-color
     min-height: 25vh
     position: relative
-
     -webkit-box-flex: 1
     flex: 1 0 0
-
+    margin-left: 0.25rem
 
   div.table > div
     overflow: auto
@@ -103,25 +159,45 @@ $muted-text-color: #ECF2FF
     left: 0
     width: 100%
 
+    &::-webkit-scrollbar
+      position: relative
+      background-color: $bg-base-color
+      width: 6px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $primary-text-color
+      border-radius: 5px
+
+    &::-webkit-scrollbar-track
+      background-color: transparent
 
   table
     border-collapse: collapse
     border-spacing: 0
-    width: 100%
-
+    width: 98%
 
     tr
       border-collapse: collapse
 
+      &:nth-child(1)
+        border-bottom: 2px solid $primary-text-color
+        color: $muted-text-color
+        font-size: 0.8rem
+        font-weight: lighter
+
       td
-        padding: 0.35rem
+        padding: 0.25rem 1.5rem 0.25rem 0.25rem
         border-bottom-width: 1px
         border-bottom-style: solid
         border-bottom-color: lightgray
 
-      td:nth-child(2)
-        text-align: right
+        &:nth-child(2)
+          text-align: right
+
+        &:nth-child(3)
+          text-align: left
 
       th
         border-bottom: 2px solid red
         border-collapse: collapse
+

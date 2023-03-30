@@ -11,11 +11,11 @@
 <body data-dap-api-key="EyMcpguhOMeIvAEL" data-dap-api-secret="30Bgy4WDy6tBkNXZ">
 
 <div class="wrapper">
-    <div class="test">
+    <div class="dap-wrapper">
         <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023"
                    data-table-connection-path="latest-highest-rank" data-table-limit="100"
                    data-table-headers="Domain Name,Tranco Rank,CrUX Rank"
-                   data-table-data-keys="domain,rank,cruxRankDisplay" data-table-bottom-cta-title="All growth data" data-table-bottom-cta-link="https://dap.live" >
+                   data-table-data-keys="domain,rank,cruxRankDisplay" data-table-bottom-cta-title="All 1M Domains" data-table-bottom-cta-link="https://dap.live" >
             <template data-property="description">
                 <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank
                     supplied
@@ -27,47 +27,34 @@
             <h1>Loading...</h1>
         </dap-table>
     </div>
-    <div class="test">
+    <div class="dap-wrapper">
         <dap-table data-title="Top 50 TLD" data-categories="Market" data-time="15 Mar 2023" data-table-limit="100"
                    data-table-headers="TLD, Totals, 7 day change"
                    data-table-data-keys="tld,latestTotal,percentageChange"
-                   data-table-connection-path="top-50-tlds">
-            <h1>Loading...</h1>
-        </dap-table>
-    </div>
-    <div class="test">
-        <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023"
-                   data-table-connection-path="latest-highest-rank" data-table-limit="100"
-                   data-table-headers="Domain Name,Tranco Rank,CrUX Rank"
-                   data-table-data-keys="domain,rank,cruxRankDisplay">
+                   data-table-connection-path="top-50-tlds" data-table-bottom-cta-title="All TLDs" data-table-bottom-cta-link="https://dap.live">
             <template data-property="description">
-                <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank
-                    supplied
-                    by Google CrUX for that domain</p>
+                <p>The top 50 TLDs by active domain names as observed using the set of active domain names currently available to DAP.LIVE</p>
             </template>
             <template data-property="feedSources">
-                <p>Tranco, Google CrUX</p>
+                <p>Centralised Zone Data Service, .UK, .EE, .NU, .SE CCTLD Zone Files</p>
             </template>
-
             <h1>Loading...</h1>
         </dap-table>
     </div>
-</div>
-<div class="flex grid">
-    <dap-table data-title="Top 50 TLD" data-categories="Market" data-time="15 Mar 2023" data-table-limit="100"
-               data-table-headers="TLD, Totals, 7 day change" data-table-data-keys="tld,latestTotal,percentageChange"
-               data-table-connection-path="top-50-tlds">
-        <h1>Loading...</h1>
-    </dap-table>
-    <dap-line-chart>
-        <h1>Loading...</h1>
-    </dap-line-chart>
-    <dap-table data-title="Top 50 Phishing Root Domains" data-categories="Abuse" data-time="15 Mar 2023"
-               data-table-limit="100" data-table-headers=""
-               data-table-data-keys="domain_name,totalsLastHrs,totalsSevenDaysAgo"
-               data-table-connection-path="top-phishing-domains">
-        <h1>Loading...</h1>
-    </dap-table>
+    <div class="dap-wrapper">
+        <dap-table data-title="Top 50 Phishing Root Domains" data-categories="Abuse" data-time="15 Mar 2023"
+                   data-table-limit="100" data-table-headers=""
+                   data-table-data-keys="domain_name,totalsLastHrs,totalsSevenDaysAgo"
+                   data-table-connection-path="top-phishing-domains" data-table-bottom-cta-title="All Phishing Reports Data" data-table-bottom-cta-link="https://dap.live">
+            <template data-property="description">
+                <p>Top observed phishing root domains over the last 24 hours based upon all URLs processed from OpenPhish</p>
+            </template>
+            <template data-property="feedSources">
+                <p>OpenPhish</p>
+            </template>
+            <h1>Loading...</h1>
+        </dap-table>
+    </div>
 </div>
 <script type="text/javascript" src="../dist/dap-live-toolkit.js"></script>
 </body>
