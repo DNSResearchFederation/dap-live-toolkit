@@ -88,6 +88,23 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     font-size: 0.9rem; }
   .dap-component .mute {
     color: gray; }
+  .dap-component .metric-title {
+    padding: 0 0.5rem 0 0.5rem;
+    margin-bottom: 0.52rem;
+    font-weight: 200;
+    color: gray; }
+  .dap-component .metric-data {
+    display: flex;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-bottom: 1rem; }
+  .dap-component .metric-number {
+    margin-right: 1rem;
+    font-size: 1.5rem; }
+  .dap-component .metric-change {
+    align-items: center;
+    display: flex;
+    padding: 0.25rem;
+    font-size: small; }
   .dap-component a {
     color: #2F4858;
     font-weight: bold; }

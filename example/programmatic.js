@@ -39,5 +39,16 @@ toolkit.createTable("#phishing-domains", {
    "tableDataKeys":"domain_name,totalsLastHrs,totalsSevenDaysAgo"
 });
 
-
+toolkit.createLineChart('#domain-growth-7-days', {
+   "title": "Domain Name Growth",
+   "metricTitle": "Last 7 Days",
+   "categories": "Market",
+   "description": "Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6 months",
+   "feedSources": "ICANN Centralised Zone Data Service (CZDS), .UK, .EE, .NU, .SE CCTLD Zone Files",
+   "lineChartConnectionPath": "domain-growth-6-months",
+   "metricConnectionPath": "domain-growth-7-days",
+   "metricProperty": "difference",
+   "metricChangeProperty": "percentageChange",
+   "chartBottomCtaTitle": "All growth data"
+})
 
