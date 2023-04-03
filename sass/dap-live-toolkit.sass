@@ -4,6 +4,8 @@ $secondary-text-color: black
 $muted-text-color: gray
 $info-background: rgba(103, 106, 139, 0.2)
 $info-color: #676A8B
+$success-color: #4BBC8E
+$danger-color: #cc0000
 
 //Reset css
 html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video
@@ -80,7 +82,6 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     margin-bottom: 0.5rem
     &:first-child
      margin-left: 0
-
   .date
     font-weight: 300
     font-size: 0.8rem
@@ -109,6 +110,14 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     font-size: 0.9rem
   .mute
     color: $muted-text-color
+
+  .success
+    background-color: rgba(75, 188, 142, 0.2)
+    color: $success-color
+
+  .danger
+    background-color: rgba(255, 0, 0, 0.2)
+    color: $danger-color
 
   // Line Chart Classes
   .metric-title

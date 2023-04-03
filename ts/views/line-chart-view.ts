@@ -33,7 +33,9 @@ const LineChartView = `
     {{#properties.metricTitle}}<div class="metric-title">{{.}}</div>{{/properties.metricTitle}}
     <div class="metric-data">
         {{#metricData}}<div class="metric-number">{{.}}</div>{{/metricData}}
-        {{#metricChange}}<div class="metric-change">{{.}}%</div>{{/metricChange}}
+        {{#metricChange}}<div class="metric-change {{metricChangeClass}}">
+            {{^metricIncrease}}&#x2193;{{/metricIncrease}}{{#metricIncrease}}&#x2191;{{/metricIncrease}}{{.}}{{#metricChangeIsPercentage}}%{{/metricChangeIsPercentage}}
+        </div>{{/metricChange}}
      </div>
       <div class="cta-wrapper">
         {{#properties.chartBottomCtaTitle}}<a class="cta-link" href="{{properties.chartBottomCtaLink}}">{{.}} →</a>{{/properties.chartBottomCtaTitle}}

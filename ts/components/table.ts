@@ -24,6 +24,10 @@ export default class Table extends BaseComponent {
         if (properties.tableDataKeys)
             model["dataKeys"] = properties.tableDataKeys.split(",");
 
+        let tableColumnFormats = null;
+        if (properties.tableColumnFormats)
+            tableColumnFormats = properties.tableColumnFormats.split(",");
+
 
         let data = [];
         if (properties.tableConnectionPath) {
@@ -31,31 +35,41 @@ export default class Table extends BaseComponent {
             model.data = [];
             data.forEach(row => {
                 let newRow = [];
-               model.dataKeys.forEach(key =>{
-                   newRow.push(row[key]);
-               });
-               model.data.push(newRow);
+                model.dataKeys.forEach((key: string, index: number) => {
+                    let value = row[key];
+
+                    if (tableColumnFormats && tableColumnFormats[index]) {
+                        switch (tableColumnFormats[index]) {
+                            case "commasepthousands":
+                                value = Number(value).toLocaleString("en-US");
+                                break;
+                            case "changepercent":
+                                if(value > 0){
+                                    // let spanElement = document.querySelector(".toggle-message");
+                                    // spanElement.classList.add('success');
+                                }
+                                else{
+
+                                }
+                                break;
+                        }
+
+                    }
+
+                    newRow.push(value);
+                });
+                model.data.push(newRow);
             });
         }
 
         element.innerHTML = Mustache.render(TableView, model);
 
         //Toggle button functionality
-        element.querySelectorAll(".toggle-message").forEach(button=>{
-            button.addEventListener("click",()=>{
+        element.querySelectorAll(".toggle-message").forEach(button => {
+            button.addEventListener("click", () => {
                 element.querySelector(".message").classList.toggle("hide");
             });
         });
-        //
-        // let currentDate = new Date();
-        // let year = currentDate.getFullYear();
-        // let month = currentDate.getMonth() + 1;
-        // let day = currentDate.getDate();
-        // let hour = currentDate.getHours();
-        // let minute = currentDate.getMinutes();
-        // let second = currentDate.getSeconds();
-        // let currentDateTimeSpan = document.getElementById("table-date");
-        // currentDateTimeSpan.innerHTML = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 
     }
 }

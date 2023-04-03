@@ -18,7 +18,7 @@ toolkit.createTable("#top-100-domains", {
 toolkit.createTable("#top-50-tld", {
    "title": "Top 50 TLD",
    "time": "15 Mar, 2023",
-   "categories": "market, domain",
+   "categories": "market",
    "description": "The top 50 TLDs by active domain names as observed using the set of active domain names currently available to DAP.LIVE",
    "feedSources": "Tranco, Google CrUX",
    "tableBottomCtaTitle":"All TLDs",
@@ -49,6 +49,8 @@ toolkit.createLineChart('#domain-growth-7-days', {
    "metricConnectionPath": "domain-growth-7-days",
    "metricProperty": "difference",
    "metricChangeProperty": "percentageChange",
+   "metricIncreaseIsBad": "false",
+   "metricChangeIsPercentage": true,
    "chartBottomCtaTitle": "All growth data"
 })
 

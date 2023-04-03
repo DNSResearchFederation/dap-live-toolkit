@@ -62,6 +62,7 @@ export default abstract class BaseComponent extends HTMLElement {
         return await remote.callApiConnection(feedPath, parameters);
     }
 
+
     /**
      * Abstract method for intialising our components
      *

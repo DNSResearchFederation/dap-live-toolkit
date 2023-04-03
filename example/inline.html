@@ -31,6 +31,7 @@
         <dap-table data-title="Top 50 TLD" data-categories="Market" data-time="15 Mar 2023" data-table-limit="100"
                    data-table-headers="TLD, Totals, 7 day change"
                    data-table-data-keys="tld,latestTotal,percentageChange"
+                   data-table-column-formats="none,commasepthousands,changepercent"
                    data-table-connection-path="top-50-tlds" data-table-bottom-cta-title="All TLDs" data-table-bottom-cta-link="https://dap.live">
             <template data-property="description">
                 <p>The top 50 TLDs by active domain names as observed using the set of active domain names currently available to DAP.LIVE</p>
@@ -58,7 +59,7 @@
 </div>
 <div class="wrapper">
    <div class="dap-wrapper">
-       <dap-line-chart  data-title="Domain Name Growth" data-categories="Market" data-line-chart-limit="6" data-line-chart-connection-path="domain-growth-6-months" data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days" data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data" data-metric-property="difference" data-metric-change-property="percentageChange">
+       <dap-line-chart  data-title="Domain Name Growth" data-categories="Market" data-line-chart-limit="6" data-line-chart-connection-path="domain-growth-6-months" data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days" data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data" data-metric-property="difference" data-metric-change-property="percentageChange" data-metric-increase-is-bad="false" data-metric-change-is-percentage="true">
            <template data-property="description">
                <p>Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6 months</p>
            </template>
