@@ -1,4 +1,4 @@
-const LineChartView = `
+const ChartView = `
 <div>
     <div class="title-div">
         {{#properties.title}}<h4>{{.}}</h4>{{/properties.title}}
@@ -37,10 +37,12 @@ const LineChartView = `
             {{^metricIncrease}}&#x2193;{{/metricIncrease}}{{#metricIncrease}}&#x2191;{{/metricIncrease}}{{.}}{{#metricChangeIsPercentage}}%{{/metricChangeIsPercentage}}
         </div>{{/metricChange}}
      </div>
+     <canvas></canvas>
       <div class="cta-wrapper">
         {{#properties.chartBottomCtaTitle}}<a class="cta-link" href="{{properties.chartBottomCtaLink}}">{{.}} →</a>{{/properties.chartBottomCtaTitle}}
     </div>
+    
 </div>    
 `;
 
-export default LineChartView
+export default ChartView

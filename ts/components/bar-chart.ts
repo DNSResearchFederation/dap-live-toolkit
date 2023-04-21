@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
 import BaseChart from "./base-chart";
 
-export default class LineChart extends BaseChart{
+export default class BarChart extends BaseChart{
 
     protected drawChart(rawData){
         let labels = [];
@@ -25,18 +25,9 @@ export default class LineChart extends BaseChart{
         };
 
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dataSet,
             options: {
-                elements: {
-                    point: {
-                        radius: 1.5
-                    },
-                    line: {
-                        borderWidth: 2
-                    }
-                },
-                tension: .5,
                 plugins: {
                     legend: {
                         display: false

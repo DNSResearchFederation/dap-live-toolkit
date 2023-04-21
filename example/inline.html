@@ -15,7 +15,8 @@
         <dap-table data-title="Top 100 Popular Domains" data-categories="Market,Domain" data-time="15 Mar 2023"
                    data-table-connection-path="latest-highest-rank" data-table-limit="100"
                    data-table-headers="Domain Name,Tranco Rank,CrUX Rank"
-                   data-table-data-keys="domain,rank,cruxRankDisplay" data-table-bottom-cta-title="All 1M Domains" data-table-bottom-cta-link="https://dap.live" >
+                   data-table-data-keys="domain,rank,cruxRankDisplay" data-table-bottom-cta-title="All 1M Domains"
+                   data-table-bottom-cta-link="https://dap.live">
             <template data-property="description">
                 <p>Top 100 Popular domains as of today ranked by Tranco and compared with the highest Bucketed Rank
                     supplied
@@ -32,9 +33,11 @@
                    data-table-headers="TLD, Totals, 7 day change"
                    data-table-data-keys="tld,latestTotal,percentageChange"
                    data-table-column-formats="none,commasepthousands,changepercent"
-                   data-table-connection-path="top-50-tlds" data-table-bottom-cta-title="All TLDs" data-table-bottom-cta-link="https://dap.live">
+                   data-table-connection-path="top-50-tlds" data-table-bottom-cta-title="All TLDs"
+                   data-table-bottom-cta-link="https://dap.live">
             <template data-property="description">
-                <p>The top 50 TLDs by active domain names as observed using the set of active domain names currently available to DAP.LIVE</p>
+                <p>The top 50 TLDs by active domain names as observed using the set of active domain names currently
+                    available to DAP.LIVE</p>
             </template>
             <template data-property="feedSources">
                 <p>Centralised Zone Data Service, .UK, .EE, .NU, .SE CCTLD Zone Files</p>
@@ -44,11 +47,14 @@
     </div>
     <div class="dap-wrapper">
         <dap-table data-title="Top 50 Phishing Root Domains" data-categories="Abuse" data-time="15 Mar 2023"
-                   data-table-limit="100" data-table-headers=""
+                   data-table-limit="100" data-table-headers="Root Domain, Last 1 Day, 7 Day Change"
                    data-table-data-keys="domain_name,totalsLastHrs,totalsSevenDaysAgo"
-                   data-table-connection-path="top-phishing-domains" data-table-bottom-cta-title="All Phishing Reports Data" data-table-bottom-cta-link="https://dap.live">
+                   data-table-connection-path="top-phishing-domains" data-table-column-formats="none,none,change"
+                   data-table-bottom-cta-title="All Phishing Reports Data"
+                   data-table-bottom-cta-link="https://dap.live">
             <template data-property="description">
-                <p>Top observed phishing root domains over the last 24 hours based upon all URLs processed from OpenPhish</p>
+                <p>Top observed phishing root domains over the last 24 hours based upon all URLs processed from
+                    OpenPhish</p>
             </template>
             <template data-property="feedSources">
                 <p>OpenPhish</p>
@@ -58,17 +64,56 @@
     </div>
 </div>
 <div class="wrapper">
-   <div class="dap-wrapper">
-       <dap-line-chart  data-title="Domain Name Growth" data-categories="Market" data-line-chart-limit="6" data-line-chart-connection-path="domain-growth-6-months" data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days" data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data" data-metric-property="difference" data-metric-change-property="percentageChange" data-metric-increase-is-bad="false" data-metric-change-is-percentage="true">
-           <template data-property="description">
-               <p>Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6 months</p>
-           </template>
-           <template data-property="feedSources">
-               <p>ICANN Centralised Zone Data Service (CZDS), .UK, .EE, .NU, .SE CCTLD Zone Files</p>
-           </template>
-           <h1>Loading</h1>
-       </dap-line-chart>
-   </div>
+    <div class="dap-wrapper">
+        <dap-line-chart data-title="Domain Name Growth" data-categories="Market" data-chart-limit="6"
+                        data-chart-connection-path="domain-growth-6-months"
+                        data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days"
+                        data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data"
+                        data-metric-property="difference" data-metric-change-property="percentageChange"
+                        data-metric-increase-is-bad="false" data-metric-change-is-percentage="true" data-x-axis="month" data-y-axis="total" data-y-axis-label="Total Domain Names">
+            <template data-property="description">
+                <p>Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6
+                    months</p>
+            </template>
+            <template data-property="feedSources">
+                <p>ICANN Centralised Zone Data Service (CZDS), .UK, .EE, .NU, .SE CCTLD Zone Files</p>
+            </template>
+            <h1>Loading</h1>
+        </dap-line-chart>
+    </div>
+    <div class="dap-wrapper">
+        <dap-table data-title="Standards Observatory Summary" data-categories="Standards"
+                   data-table-limit="100" data-table-headers="Risk Level,Articles,Study Group"
+                   data-table-data-keys="riskLevel,totals,displayStudyGroup" data-table-class-keys="displayClass,none,none"
+                   data-table-connection-path="study-group-threshold-summary" data-api-end-point="https://webservices-standards.dnsrf.org"
+                   data-api-key="5m3lF1lszDZRabyq" data-api-secret="z0S9Ykez8LyL1wn1" data-table-column-formats="none,none,change" data-row-click-url="http://localhost:2127/internet-standards-observatory/itu?studyGroup={dashboardId}">
+            <template data-property="description">
+                <p>Top observed phishing root domains over the last 24 hours based upon all URLs processed from
+                    OpenPhish</p>
+            </template>
+            <template data-property="feedSources">
+                <p>OpenPhish</p>
+            </template>
+            <h1>Loading...</h1>
+        </dap-table>
+    </div>
+    <div class="dap-wrapper">
+        <dap-bar-chart data-title="Domain Name Growth" data-categories="Market" data-chart-limit="6"
+                        data-chart-connection-path="domain-growth-6-months"
+                        data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days"
+                        data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data"
+                        data-metric-property="difference" data-metric-change-property="percentageChange"
+                        data-metric-increase-is-bad="false" data-metric-change-is-percentage="true" data-x-axis="month" data-y-axis="total" data-y-axis-label="Total Domain Names">
+            <template data-property="description">
+                <p>Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6
+                    months</p>
+            </template>
+            <template data-property="feedSources">
+                <p>ICANN Centralised Zone Data Service (CZDS), .UK, .EE, .NU, .SE CCTLD Zone Files</p>
+            </template>
+            <h1>Loading</h1>
+        </dap-bar-chart>
+    </div>
 </div>
 <script type="text/javascript" src="../dist/dap-live-toolkit.js"></script>
 </body>

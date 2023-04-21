@@ -35,7 +35,10 @@ const TableView = `
                 <tr>
                     {{#headers}}<td>{{.}}</td>{{/headers}}
                 </tr>
-                {{#data}}<tr>{{#.}}<td><span>{{.}}</span></td>{{/.}}</tr>{{/data}}
+                {{#data}}<tr>{{#.}}<td class="{{className}}">
+                {{^rowClickUrl}}<span>{{{value}}}</span>{{/rowClickUrl}}
+                {{#rowClickUrl}}<a href="{{.}}">{{{value}}}</a>{{/rowClickUrl}}
+                </td>{{/.}}</tr>{{/data}}
             </table>
         </div>
     </div>

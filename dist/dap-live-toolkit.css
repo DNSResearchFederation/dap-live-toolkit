@@ -88,6 +88,16 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     font-size: 0.9rem; }
   .dap-component .mute {
     color: gray; }
+  .dap-component .success {
+    background-color: rgba(75, 188, 142, 0.2);
+    color: #4BBC8E; }
+  .dap-component .danger, .dap-component .error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #cc0000; }
+  .dap-component .warn {
+    background-color: yellow; }
+  .dap-component .no-bg {
+    background-color: transparent; }
   .dap-component .metric-title {
     padding: 0 0.5rem 0 0.5rem;
     margin-bottom: 0.52rem;
