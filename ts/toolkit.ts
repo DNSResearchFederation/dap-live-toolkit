@@ -4,6 +4,7 @@ import Table from "./components/table";
 import LineChart from "./components/line-chart";
 import Remote from "./util/remote";
 import BarChart from "./components/bar-chart";
+import PieChart from "./components/pie-chart";
 
 
 export default class DAPLiveToolkit {
@@ -34,3 +35,4 @@ export default class DAPLiveToolkit {
 customElements.define("dap-table", Table);
 customElements.define("dap-line-chart", LineChart);
 customElements.define("dap-bar-chart", BarChart);
+customElements.define("dap-pie-chart", PieChart);

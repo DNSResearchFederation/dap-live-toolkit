@@ -40,6 +40,7 @@ export default abstract class BaseComponent extends HTMLElement {
                 }
 
             }
+            let theme = this.closest("[data-theme]");
         }
 
         // find any inline templates

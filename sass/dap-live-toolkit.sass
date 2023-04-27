@@ -1,11 +1,15 @@
-$bg-base-color: #F6F1F1
+$bg-base-color: white
 $primary-text-color: #2F4858
 $secondary-text-color: black
 $muted-text-color: gray
-$info-background: rgba(103, 106, 139, 0.2)
+$info-bg-color: rgba(103, 106, 139, 0.2)
 $info-color: #676A8B
-$success-color: #4BBC8E
-$danger-color: #cc0000
+$success-color: #82DD55
+$success-bg-color: rgba(75, 188, 142, 0.2)
+$danger-color: #E23636
+$danger-bg-color: rgba(255, 0, 0, 0.2)
+$alert-color: #EDB95E
+
 
 //Reset css
 html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video
@@ -93,7 +97,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     font-size: 0.9rem
 
   .message
-    background-color: $info-background
+    background-color: $info-bg-color
     border-left: 8px solid $info-color
     padding: 1rem 0.5rem 1rem 0.5rem
 
@@ -112,15 +116,15 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     color: $muted-text-color
 
   .success
-    background-color: rgba(75, 188, 142, 0.2)
+    background-color: $success-bg-color
     color: $success-color
 
   .danger, .error
-    background-color: rgba(255, 0, 0, 0.2)
+    background-color: $danger-bg-color
     color: $danger-color
 
   .warn
-    background-color: yellow
+    background-color: $alert-color
 
   .no-bg
     background-color: transparent

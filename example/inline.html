@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../dist/dap-live-toolkit.css">
     <title>Inline Toolkit Example</title>
 </head>
-<body data-dap-api-key="EyMcpguhOMeIvAEL" data-dap-api-secret="30Bgy4WDy6tBkNXZ">
+<body data-dap-api-key="EyMcpguhOMeIvAEL" data-dap-api-secret="30Bgy4WDy6tBkNXZ" data-theme="light">
 
 <div class="wrapper">
     <div class="dap-wrapper">
@@ -113,6 +113,25 @@
             </template>
             <h1>Loading</h1>
         </dap-bar-chart>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="dap-wrapper">
+        <dap-pie-chart data-title="Domain Name Growth" data-categories="Market" data-chart-limit="6"
+                       data-chart-connection-path="domain-growth-6-months"
+                       data-metric-connection-path="domain-growth-7-days" data-metric-title="Last 7 Days"
+                       data-chart-bottom-cta-link="https://dap.live" data-chart-bottom-cta-title="All growth data"
+                       data-metric-property="difference" data-metric-change-property="percentageChange"
+                       data-metric-increase-is-bad="false" data-metric-change-is-percentage="true" data-key-property="month" data-value-property="total" data-pie-label="Total Domain Names">
+            <template data-property="description">
+                <p>Overall growth of active domain names currently being processed by DAP.LIVE tracked over the last 6
+                    months</p>
+            </template>
+            <template data-property="feedSources">
+                <p>ICANN Centralised Zone Data Service (CZDS), .UK, .EE, .NU, .SE CCTLD Zone Files</p>
+            </template>
+            <h1>Loading</h1>
+        </dap-pie-chart>
     </div>
 </div>
 <script type="text/javascript" src="../dist/dap-live-toolkit.js"></script>

@@ -35,7 +35,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
   display: flex;
   -webkit-box-flex: 1;
   font-family: Roboto, sans-serif;
-  background-color: #F6F1F1;
+  background-color: white;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   width: 100%; }
@@ -90,12 +90,12 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     color: gray; }
   .dap-component .success {
     background-color: rgba(75, 188, 142, 0.2);
-    color: #4BBC8E; }
+    color: #82DD55; }
   .dap-component .danger, .dap-component .error {
     background-color: rgba(255, 0, 0, 0.2);
-    color: #cc0000; }
+    color: #E23636; }
   .dap-component .warn {
-    background-color: yellow; }
+    background-color: #EDB95E; }
   .dap-component .no-bg {
     background-color: transparent; }
   .dap-component .metric-title {
@@ -145,7 +145,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
   .dap-component span {
     font-size: 0.8rem; }
   .dap-component div.table {
-    background-color: #F6F1F1;
+    background-color: white;
     min-height: 25vh;
     position: relative;
     -webkit-box-flex: 1;
@@ -161,7 +161,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
     width: 100%; }
     .dap-component div.table > div::-webkit-scrollbar {
       position: relative;
-      background-color: #F6F1F1;
+      background-color: white;
       width: 6px; }
     .dap-component div.table > div::-webkit-scrollbar-thumb {
       background-color: #2F4858;
