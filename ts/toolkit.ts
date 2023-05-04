@@ -29,10 +29,14 @@ export default class DAPLiveToolkit {
     public createLineChart(elementSelector, properties: any){
         new LineChart({...this._config, ...properties}, elementSelector);
     }
+
+    //Static initialiser
+    public static initialiseInlineElements(){
+        // Add our components as custom elements
+        customElements.define("dap-table", Table);
+        customElements.define("dap-line-chart", LineChart);
+        customElements.define("dap-bar-chart", BarChart);
+        customElements.define("dap-pie-chart", PieChart);
+    }
 }
 
-// Add our components as custom elements
-customElements.define("dap-table", Table);
-customElements.define("dap-line-chart", LineChart);
-customElements.define("dap-bar-chart", BarChart);
-customElements.define("dap-pie-chart", PieChart);
